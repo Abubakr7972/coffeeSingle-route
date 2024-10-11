@@ -1,0 +1,486 @@
+/* Basic layout */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.product-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+    padding: 20px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+
+
+/* Product Gallery */
+.product-gallery {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-image {
+    width: 100%;
+    height: 500px; /* Increased height for better visibility */
+    border-radius: 12px;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Love icon overlay */
+.love-icon {
+    position: absolute;
+    top: 25px; /* Adjust as necessary */
+    right: 15px; /* Adjust as necessary */
+    font-size: 30px; /* Size of the icon */
+    color: #e74c3c;
+    z-index: 1; /* Ensure it appears above the image */
+}
+
+/* Thumbnail container */
+.thumbnail-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.thumbnail {
+    width: 22%;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border 0.3s ease-in-out;
+}
+
+.thumbnail.active {
+    border: 2.5px solid rgb(83, 56, 29);
+}
+
+.thumbnail:hover {
+    border: 2.5px solid rgb(83, 56, 29);
+}
+
+/* Product Details */
+.product-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: rgb(83, 56, 29);
+    margin: 20px 0;
+    line-height: 1.7;
+    text-align: justify;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+}
+
+
+.Main{
+    display: flex;
+}
+
+.star-rating{
+    margin-left: 20px;
+}
+
+.star {
+    cursor: pointer; /* Change cursor on hover */
+    color: rgb(154, 153, 153); /* Default star color */
+    transition: color 0.3s;
+    margin-top: 15px;
+}
+
+.star.filled {
+    color: gold; /* Color when filled */
+}
+
+
+.thank-you-message {
+    margin-top: 5px; /* Space above the message */
+    font-size: 1rem; /* Increase font size */
+    color: rgb(83, 56, 29);
+    font-weight: 700; /* Color for the thank you message */
+}
+
+
+.feedback-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-left: 25px;
+  }
+  
+  .feedback-input {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 2px solid rgb(154, 153, 153);
+    color:rgb(83, 56, 29);
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    text-indent: 10px;
+  }
+  
+  .feedback-button {
+    padding: 10px;
+    background-color: rgb(83, 56, 29); /* Green background */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .feedback-button:hover {
+    background-color: rgb(83, 56, 29); /* Darker green on hover */
+  }
+  
+
+/* Product Pricing */
+.product-pricing {
+    align-items: center; /* Vertically center the items */
+    margin-top: 10px; /* Optional: add some space above the pricing */
+}
+
+.product-pricing .old-price {
+    text-decoration: line-through solid red;
+    color: red;
+    margin-right: 10px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.product-pricing .new-price {
+    color: rgb(83, 56, 29);
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-right: 10px; /* Add space between the new price and rating */
+}
+
+/* Product Icons */
+.product-icons {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px; /* Space between icons */
+}
+
+.icon {
+    font-size: 30px;
+    cursor: pointer;
+    border: 2px solid rgb(83, 56, 29); /* Red border */
+    border-radius: 50%; /* Circular border */
+    background-color: transparent; /* Transparent background */
+    padding: 8px; /* Padding for better click area */
+    transition: background-color 0.3s, transform 0.2s ease-in-out; /* Transition effects */
+}
+
+/* Change background color on click */
+.icon:active {
+    background-color: red; /* Red background on click */
+}
+
+.like-icon {
+    color: #e74c3c;
+}
+
+.basket-icon {
+    color: rgb(83, 56, 29);
+}
+
+
+/* Product Header */
+.product-header {
+    display: flex;
+    align-items: center; /* Aligns items vertically centered */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.product-header h1 {
+    font-size: 2rem; /* Adjust font size as needed */
+    margin-right: 20px;
+    font-family: "Rubik", sans-serif;
+    color: rgb(83, 56, 29);
+}
+
+.product-image {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: for rounded corners */
+}
+
+
+
+/* Count display for icons */
+.icon-count {
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    background-color: #d9534f;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 35px;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    color: #27ae60; /* Green for hover effect */
+}
+
+
+/* Animation for fade-in effect */
+.fade-in {
+    opacity: 1;
+    animation: fadeIn 1s forwards;
+}
+
+/* Animation for sliding in from left */
+.slide-in-left {
+    opacity: 0;
+    animation: slideInLeft 1s forwards;
+}
+
+/* Animation for sliding in from right */
+.slide-in-right {
+    opacity: 0;
+    animation: slideInRight 1s forwards;
+}
+
+/* Animation for sliding in from bottom */
+.slide-in-bottom {
+    opacity: 0;
+    animation: slideInBottom 1s forwards;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Existing styles... */
+.product-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(139, 84, 28);
+    padding: 20px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffffb9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px 4px rgb(250, 250, 250); /* White shadow on all sides */
+    max-width: 1200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+/* Other existing styles remain unchanged... */
+
+
+
+
+/* Responsive design from 1400px to 300px */
+@media screen and (max-width: 1400px) {
+    .product-container {
+        max-width: 1000px;
+    }
+    .main-image{
+        width: 97%;
+        height: auto;
+    }
+    .product-description{
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    .star-rating{
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product-gallery,
+    .product-details {
+        width: 99%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .thumbnail {
+        width: 23%;
+    }
+
+    .main-image{
+        width: 95%;
+        height: auto;
+    }
+
+    .product-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .icon {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .thumbnail {
+        width: 24%;
+    }
+
+    .main-image{
+        width: 93%;
+        height: auto;
+    }
+
+    .product-description {
+        font-size: 0.85rem;
+    }
+
+    .icon {
+        font-size: 24px;
+    }
+
+    .icon-count {
+        top: -6px;
+        right: -6px;
+    }
+    .feedback-section{
+        margin-top: 80px;
+        margin-left: -250px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .product-description {
+        font-size: 0.8rem;
+        text-align: left;
+    }
+
+    .main-image{
+        width: 91%;
+        height: auto;
+    }
+
+    .icon {
+        font-size: 22px;
+    }
+    .star-rating{
+        margin-left: 10px;
+        margin-top: 50px;
+        margin-left: -70px;
+    }
+    .feedback-section{
+        margin-top: 120px;
+        margin-left: -175px;
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    .product-description {
+        font-size: 0.75rem;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+
+    .icon-count {
+        font-size: 10px;
+        top: -4px;
+        right: -4px;
+    }
+
+}
