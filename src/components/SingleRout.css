@@ -57,7 +57,6 @@
 /* Thumbnail container */
 .thumbnail-container {
     display: flex;
-    justify-content: space-between;
     margin-top: 15px;
 }
 
@@ -68,7 +67,10 @@
     border: 2px solid transparent;
     border-radius: 8px;
     transition: border 0.3s ease-in-out;
+    margin: 0px 10px;
 }
+
+
 
 .thumbnail.active {
     border: 2.5px solid rgb(83, 56, 29);
@@ -81,17 +83,17 @@
 /* Product Details */
 .product-details {
     flex: 1;
-    padding: 20px;
 }
 
 .product-description {
     font-size: 1rem;
     color: rgb(83, 56, 29);
-    margin: 20px 0;
     line-height: 1.7;
     text-align: justify;
     font-family: "Rubik", sans-serif;
     font-weight: 500;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
@@ -100,7 +102,7 @@
 }
 
 .star-rating{
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .star {
@@ -168,6 +170,7 @@
     margin-right: 10px;
     font-weight: 900;
     font-size: 18px;
+    padding-left: 20px;
 }
 
 .product-pricing .new-price {
@@ -187,7 +190,8 @@
 .icon-container {
     position: relative;
     display: inline-block;
-    margin-right: 20px; /* Space between icons */
+    margin-right: 20px;
+    margin-top: 10px; /* Space between icons */
 }
 
 .icon {
@@ -222,16 +226,20 @@
 }
 
 .product-header h1 {
-    font-size: 2rem; /* Adjust font size as needed */
+    font-size: 1.8rem; /* Adjust font size as needed */
     margin-right: 20px;
     font-family: "Rubik", sans-serif;
     color: rgb(83, 56, 29);
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
 .product-image {
     width: 100px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: for rounded corners */
+    border-radius: 8px; 
+    margin-right: 10px;
+    margin-top: 20px;/* Optional: for rounded corners */
 }
 
 
@@ -381,6 +389,10 @@
     .star-rating{
         margin-left: 30px;
     }
+    .like-icon{
+        margin-left: 10px;
+        margin-top: 10px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -395,9 +407,12 @@
 }
 
 @media screen and (max-width: 768px) {
+
     .thumbnail {
-        width: 23%;
+        width: 23%; /* Adjust the width to fit two images per row */
+        margin-bottom: 15px; /* Add spacing between rows */
     }
+
 
     .main-image{
         width: 95%;
@@ -411,12 +426,18 @@
 
     .icon {
         font-size: 26px;
+        margin-top: 20px;
     }
 }
 
 @media screen and (max-width: 600px) {
+    .thumbnail-container {
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
     .thumbnail {
-        width: 24%;
+        width: 42%; /* Adjust the width to fit two images per row */
+        margin-bottom: 15px; /* Add spacing between rows */
     }
 
     .main-image{
@@ -443,6 +464,11 @@
 }
 
 @media screen and (max-width: 400px) {
+    .thumbnail {
+        width: 41%;
+        margin-left: 5px; /* Keep the same width for smaller screens */
+    }
+    
     .product-description {
         font-size: 0.8rem;
         text-align: left;
@@ -459,16 +485,22 @@
     .star-rating{
         margin-left: 10px;
         margin-top: 50px;
-        margin-left: -70px;
+        margin-left: -155px;
     }
     .feedback-section{
-        margin-top: 120px;
-        margin-left: -175px;
+        margin-top: 110px;
+        margin-left: -150px;
     }
 }
 
 
 @media screen and (max-width: 300px) {
+    .thumbnail {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 10px; /* Adjust margin for smaller screens */
+    }
+
+
     .product-description {
         font-size: 0.75rem;
     }
