@@ -440,6 +440,14 @@
         margin-bottom: 15px; /* Add spacing between rows */
     }
 
+    .icon-container{
+        margin-top: -10px;
+    }
+
+    .product-image{
+        margin-right: 10px;
+    }
+
     .main-image{
         width: 93%;
         height: auto;
@@ -468,10 +476,13 @@
         width: 41%;
         margin-left: 5px; /* Keep the same width for smaller screens */
     }
+
+    .product-header h1 {
+        font-size: 25px;
+    }
     
     .product-description {
         font-size: 0.8rem;
-        text-align: left;
     }
 
     .main-image{
