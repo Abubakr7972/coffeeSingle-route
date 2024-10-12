@@ -458,16 +458,16 @@
         overflow: hidden;
         position: relative;
         max-height: 150px; /* Adjust the height as needed to show half */
-      }
+    }
     
-      .product-description::after {
+    .product-description::after {
         content: '';
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 50px; /* Adjust the height for a fade-out effect */
-      }
+    }
 
 
     .icon {
@@ -494,6 +494,11 @@
 
     .thank-you-message{
         display: none;
+    }
+
+    .icon-count{
+        margin-top: 10px;
+        border-radius: 80%;
     }
 }
 
