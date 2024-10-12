@@ -479,10 +479,13 @@
         right: -6px;
     }
 
+    .star-rating{
+        margin-left: 10px;
+    }
     
     .feedback-section{
         margin-top: 80px;
-        margin-left: -250px;
+        margin-left: -230px;
     }
 
     .feedback-button {
